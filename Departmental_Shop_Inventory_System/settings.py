@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'InventoryManagement.apps.InventoryManagementConfig',
+    'CustomerManagement.apps.CustomerManagementConfig',
+    'StaffManagement.apps.StaffManagementConfig',
+    'Profile.apps.ProfileConfig',
+    'OrderAndInvoice.apps.OrderandinvoiceConfig',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +124,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL ='login'
