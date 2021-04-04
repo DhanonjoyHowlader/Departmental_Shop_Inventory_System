@@ -18,24 +18,6 @@ def ShowStaffInfo(request):
 
 
 
-def GetStaffInfo(request):
-
-    StaffForm = StaffInsertForm()
-
-    if request.method == "POST":
-        StaffForm = StaffInsertForm(request.POST)
-        if StaffForm.is_valid():
-            StaffForm.save()
-            messages.info(request, 'Staff added successfully ✅')
-
-
-
-
-    context={
-        'form' : StaffForm
-    }
-    return render(request, 'store/create_staff.html',context)
-
 @login_required
 def CreateProfile(request):
     form = StaffInsertForm()

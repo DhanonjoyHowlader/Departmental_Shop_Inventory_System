@@ -42,7 +42,6 @@ urlpatterns = [
     path('', dashboard, name='dashboard'),
     path('users/', include('Profile.urls')),
     path('products/',productsviews.showProducts,name = 'products'),
-    path('GetStaffInfo/',staffmanagementviews.GetStaffInfo, name='create-staff'),
     path('ShowStaffInfo/',staffmanagementviews.ShowStaffInfo, name='staff-list'),
     path('userregistration/',usrregviews.Userregistration, name='add-user'),
     path('InsertCustomer/',cus_insert.InsertCustomer, name='create-buyer'),
