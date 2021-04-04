@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'StaffManagement.apps.StaffManagementConfig',
     'Profile.apps.ProfileConfig',
     'OrderAndInvoice.apps.OrderandinvoiceConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

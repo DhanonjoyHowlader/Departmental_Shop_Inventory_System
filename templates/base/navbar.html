@@ -8,7 +8,7 @@
     </div>
     <div class="top-right">
         <div class="header-menu">
-       <marquee>Hello Sir Welcome to our Retail Store ! 😊</marquee>
+       <marquee>Hello Sir Welcome to our Departmental Shop ! 😊</marquee>
             <div class="header-left">
 
                 <div class="form-inline">
@@ -26,8 +26,10 @@
                 </a>
 
                 <div class="user-menu dropdown-menu">
-
+                    <a class="nav-link" href="{% url 'create_profile' %}"><i class="fa fa-power -off"></i>Setup your Profile</a>
+                    <a class="nav-link" href="{% url 'show_profile' %}"><i class="fa fa-power -off"></i>Profile</a>
                     <a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-power -off"></i>Logout</a>
+
                 </div>
             </div>
 

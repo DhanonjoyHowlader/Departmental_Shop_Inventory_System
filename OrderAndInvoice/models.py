@@ -12,7 +12,7 @@ class Order(models.Model):
     Payment_date = models.DateField(auto_now_add=True)
     Price = models.IntegerField(blank=True, default=1)
     quantity = models.IntegerField(blank=True)
-    Order_status = models.CharField(max_length=200, default="Order Status")
+    Order_status = models.CharField(max_length=200)
     Order_date = models.DateField(auto_now_add=True)
 
 

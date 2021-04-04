@@ -43,6 +43,8 @@
                             <tr>
                                 <th class="serial">#</th>
                                 <th>Name</th>
+                                <th>Designation</th>
+                                <th>Expertise</th>
                                 <th>Phone</th>
                                 <th>Email</th>
                             </tr>
@@ -52,7 +54,9 @@
                             {% for all_staff in all_staff %}
                             <tr>
                                 <td class="serial">{{ forloop.counter }}</td>
-                                <td>{{ all_staff.First_Name }} {{ all_staff.Last_Name }}</td>
+                                <td>{{ all_staff.Full_name }} </td>
+                                <td>{{ all_staff.Designation }} </td>
+                                <td>{{ all_staff.Expertise }} </td>
                                 <td>{{ all_staff.Phone_num }}</td>
                                 <td>{{ all_staff.Email }}</td>
                             </tr>

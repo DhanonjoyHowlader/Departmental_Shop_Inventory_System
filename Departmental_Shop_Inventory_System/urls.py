@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 from InventoryManagement import views as productsviews
 from StaffManagement import views as staffmanagementviews
 from Profile import views as usrregviews
@@ -54,7 +57,12 @@ urlpatterns = [
     path('AddStock/', addstk.Add_stock, name='add-stock'),
     path('ViewCategories/', cateview.ViewCatagory, name='category-list'),
     path('AddCategory/',add_cate.create_category, name='add-category'),
+    path('profile/', staffmanagementviews.ViewProfile, name='show_profile'),
+    path('setupProfile/', staffmanagementviews.CreateProfile, name='create_profile'),
 
 
 
 ]
+
+if settings.DEBUG == True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

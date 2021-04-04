@@ -39,7 +39,7 @@ def showProducts(request):
         'all_products': products
     }
 
-    return render(request, 'pro.html', context)
+    return render(request, 'store/product_list.html', context)
 
 def InsertSupplier(request):
     sup = SupplierForm()
