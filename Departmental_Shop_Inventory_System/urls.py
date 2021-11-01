@@ -29,6 +29,7 @@ from InventoryManagement import views as Supplier_ins
 from InventoryManagement import views as show_sup
 from OrderAndInvoice import views as New_order
 from OrderAndInvoice import views as view_order
+from OrderAndInvoice import views as total_sell
 from .views import dashboard
 from InventoryManagement import views as stkviw
 from InventoryManagement import views as cateview
@@ -58,6 +59,7 @@ urlpatterns = [
     path('AddCategory/',add_cate.create_category, name='add-category'),
     path('profile/', staffmanagementviews.ViewProfile, name='show_profile'),
     path('setupProfile/', staffmanagementviews.CreateProfile, name='create_profile'),
+    path('totalsell/', total_sell.TotalSell, name='total-sell'),
 
 
 

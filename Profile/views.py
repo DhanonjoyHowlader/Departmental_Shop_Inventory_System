@@ -16,7 +16,7 @@ def Userregistration(request):
 
         if form_obj.is_valid():
             form_obj.save()
-            messages.info(request, 'Customer added successfully ✅')
+            messages.info(request, 'User added successfully ✅')
 
 
     context ={

@@ -37,6 +37,8 @@ class Product(models.Model):
 class Stock(models.Model):
     Quantity = models.IntegerField(blank=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, default=1)
+    sell = models.IntegerField(blank=True,null=True, default=0)    
+
 
     def __str__(self):
         return self.product.title +" - "+ str(self.Quantity)
